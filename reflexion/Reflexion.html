@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réflexion Humaine</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            display: flex;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            transition: all 0.3s ease;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 10px;
+        }
+        .navbar a {
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.3s ease;
+        }
+        .navbar a:hover, .navbar a.active {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        .navbar .menu {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+        }
+        .navbar .menu a {
+            text-align: left;
+            padding-left: 20px;
+        }
+        .menu-icon {
+            display: none;
+            cursor: pointer;
+        }
+        section {
+            padding: 100px 20px;
+            margin-top: 60px;
+        }
+        h2 {
+            font-size: 2em;
+            margin-bottom: 0.5em;
+        }
+        p {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .menu-icon {
+                display: block;
+                color: white;
+                font-size: 30px;
+                padding: 14px 16px;
+            }
+            .navbar .menu {
+                display: none;
+                width: 100%;
+            }
+            .navbar.open .menu {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        <div class="menu">
+            <a href="#perception">👁️ Perception</a>
+            <a href="#analyse">🧠 Analyse</a>
+            <a href="#mémoire">💾 Mémoire</a>
+            <a href="#émotion">❤️ Émotion</a>
+            <a href="#raisonnement">🔍 Raisonnement</a>
+            <a href="#décision">📝 Décision</a>
+            <a href="#action">🏃‍♂️ Action</a>
+        </div>
+    </div>
+
+    <section id="perception">
+        <div class="container">
+            <h2>👁️ Perception</h2>
+            <p>La perception est la première étape de la réflexion, où le cerveau reçoit des informations sensorielles de l'environnement.</p>
+        </div>
+    </section>
+
+    <section id="analyse">
+        <div class="container">
+            <h2>🧠 Analyse</h2>
+            <p>Lors de l'analyse, le cerveau traite et interprète les informations perçues pour comprendre ce qu'elles signifient.</p>
+        </div>
+    </section>
+
+    <section id="mémoire">
+        <div class="container">
+            <h2>💾 Mémoire</h2>
+            <p>La mémoire permet au cerveau de stocker et de récupérer des informations passées pour les utiliser dans le processus de réflexion.</p>
+        </div>
+    </section>
+
+    <section id="émotion">
+        <div class="container">
+            <h2>❤️ Émotion</h2>
+            <p>Les émotions jouent un rôle crucial en influençant la manière dont le cerveau perçoit et analyse les informations.</p>
+        </div>
+    </section>
+
+    <section id="raisonnement">
+        <div class="container">
+            <h2>🔍 Raisonnement</h2>
+            <p>Le raisonnement est l'étape où le cerveau utilise la logique et les connaissances pour évaluer les options et faire des prédictions.</p>
+        </div>
+    </section>
+
+    <section id="décision">
+        <div class="container">
+            <h2>📝 Décision</h2>
+            <p>La prise de décision est le processus par lequel le cerveau choisit une action parmi plusieurs alternatives en se basant sur l'analyse et le raisonnement.</p>
+        </div>
+    </section>
+
+    <section id="action">
+        <div class="container">
+            <h2>🏃‍♂️ Action</h2>
+            <p>L'action est la mise en œuvre de la décision prise, conduisant à une réponse ou un comportement observable.</p>
+        </div>
+    </section>
+
+    <script>
+        function toggleMenu() {
+            var navbar = document.querySelector('.navbar');
+            navbar.classList.toggle('open');
+        }
+
+        window.addEventListener('scroll', function() {
+            var sections = document.querySelectorAll('section');
+            var navLinks = document.querySelectorAll('.navbar .menu a');
+
+            var currentSectionId = '';
+
+            sections.forEach(function(section) {
+                var sectionTop = section.offsetTop - 70; // Adjust for navbar height
+                if (window.scrollY >= sectionTop) {
+                    currentSectionId = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(function(link) {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + currentSectionId) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

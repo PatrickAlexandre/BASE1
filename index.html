@@ -2,272 +2,96 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="styles.css">
-    <title>Festival</title>
+    <title>Most Used Brain Folder</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
-<body>
-    <div>
-        <header id="home">
-            <div class="w3-top w3-light-gray">
-                <div class="w3-row w3-padding w3-white">
-                  <div class="w3-col s3">
-                    <a href="#home" class="w3-button w3-block w3-white">Home</a>
-                  </div>
-                  <div class="w3-col s3">
-                    <a href="#gallery" class="w3-button w3-block w3-white">Gallery</a>
-                  </div>
-                  <div class="w3-col s3">
-                    <a href="#ticket" class="w3-button w3-block w3-white">Ticket</a>
-                  </div>
-                  <div class="w3-col s3">
-                    <a href="#book" class="w3-button w3-block w3-white">Book</a>
-                  </div>
-                </div>
-              </div> 
-        </header>
-    </div>
-    <main>
-        <div class="hero">
-         <div class="hero-description">
-        
-             <div class="hero-text">  
-                <h1 class="hero-header">
-                    From <span style="color:#FDB813 ">sun up to sun down,</span> we have the best party in town.
-                 </h1>
-                 <p>Sunday FEB 13</p>
-                 <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xlarge w3-margin-bottom w3-margin-right"></i>40 Glenwood Street
-                  Coventry, RI 02816</p>
-                  <a href="#book" class="w3-btn w3-red w3-margin-top w3-round" style="width: 40%;">
-                    Buy Ticket
-                  </a>
-             </div>
-             
-         </div>
+<body class="bg-blue-300 flex items-center justify-center h-screen">
+    <!-- Bouton en bas à droite -->
+    <a href="mailto:patou.dev@yopmail.fr?subject=Bug Report/Message/Assistance Request&body=Please describe your issue or request here." class="fixed bottom-4 right-4 bg-blue-500 text-white px-4 py-2 rounded-full shadow-lg hover:bg-blue-600 transition duration-300">
+        <i class="fas fa-envelope mr-2"></i> Reporter un bug <!--| Envoyer un message | Demande d'assistance -->
+    </a>
 
+    <div class="bg-blue-200 p-6 rounded-xl grid grid-cols-3 gap-4">
+        <!-- Employés AI 💼🤖 -->
+        <div class="flex flex-col items-center relative">
+            <img src="https://placehold.co/80x80" class="w-20 h-20 rounded-xl">
+            <span class="mt-2 text-sm font-semibold text-gray-700">Employés AI</span>
+            <div class="absolute top-0 right-0 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">99€</div>
         </div>
-        <div class="main">
-        <div class="about" id="gallery">
-            
-                <h2>Gallery</h2>
-          
-            <div class="gallery">
-            <div class="about-image-1">
-               <img src="https://spaces.w3schools.com/images/4_M8uIfPEZw.jpg" loading="lazy" alt="Photo by Muneeb Syed | Unsplash"/>
-               
-            </div>
-            <div class="about-image-2">
-               <div class="image-list">
-                <img src="https://spaces.w3schools.com/images/Fh-Q-xfdh_o.jpg" loading="lazy" alt="Photo by Pien Muller | Unsplash"/>
-               </div>
-               <div class="image-list">
-                <img src="https://spaces.w3schools.com/images/GrIty4BNJEE.jpg" loading="lazy"  alt="Photo by Francisco Moreno | Unsplash"/>
-               </div>
-            </div>
+        <!-- Business Growth Guide 📈📚 -->
+        <a href="https://chatgpt.com/g/g-YY3qeRoAS-business-growth-guide" class="flex flex-col items-center relative">
+            <img src="https://placehold.co/80x80" class="w-20 h-20 rounded-xl">
+            <span class="mt-2 text-sm font-semibold text-gray-700">Business Growth Guide</span>
+            <div class="absolute top-0 right-0 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">18€</div>
+        </a>
+        <!-- Création d'Entreprise (5 étapes) 🏢🛠️ -->
+        <div class="flex flex-col items-center" onclick="window.open('./entreprise/dashboard.html', '_blank')">
+            <img src="https://placehold.co/80x80" class="w-20 h-20 rounded-xl">
+            <span class="mt-2 text-sm font-semibold text-gray-700">Création d'Entreprise (5 étapes)</span>
+        </div>
+        <!-- Festival 🎉🎵 -->
+        <div class="flex flex-col items-center" onclick="window.open('./festival/PT/Seixas-Do-Douro.html', '_blank')">
+            <img src="https://placehold.co/80x80" class="w-20 h-20 rounded-xl">
+            <span class="mt-2 text-sm font-semibold text-gray-700">Festival</span>
+        </div>
+        <!-- Améliorer sa productivité 📊🚀 -->
+        <div class="flex flex-col items-center">
+            <img src="https://placehold.co/80x80" class="w-20 h-20 rounded-xl">
+            <span class="mt-2 text-sm font-semibold text-gray-700">Améliorer sa productivité</span>
+        </div>
+        <!-- Marketing et vente 💼📢 -->
+        <div class="flex flex-col items-center">
+            <img src="https://placehold.co/80x80" class="w-20 h-20 rounded-xl">
+            <span class="mt-2 text-sm font-semibold text-gray-700">Marketing et vente</span>
+        </div>
+        <!-- Livres 📚📖 -->
+        <a href="https://books.google.fr/books?uid=109463742268000114572&as_coll=0" target="_blank" class="flex flex-col items-center">
+            <img src="https://placehold.co/80x80" class="w-20 h-20 rounded-xl">
+            <span class="mt-2 text-sm font-semibold text-gray-700">Livres</span>
+        </a>        
+        <!-- Bookmarks 💻☁️ -->
+        <div class="flex flex-col items-center">
+            <img src="https://placehold.co/80x80" class="w-20 h-20 rounded-xl">
+            <span class="mt-2 text-sm font-semibold text-gray-700">Signets</span>
         </div>
 
+        <!-- Alimentation 🍽️🍎 -->
+        <div class="flex flex-col items-center">
+            <img src="https://placehold.co/80x80" class="w-20 h-20 rounded-xl">
+            <span class="mt-2 text-sm font-semibold text-gray-700">Alimentation</span>
         </div>
-        <div class="poster">
-        
-            <h2>Singers & musicians</h2>
-        
-        <div class="poster-main">
-          <div class="poster-list">
-             <img src="https://spaces.w3schools.com/images/NeTf7NGXrtc.jpg" loading="lazy" alt="Photo by Taylor | Unsplash"/>
-             <div class="poster-text">
-            
-                 <h3>Ruth R. Channel
-                </h3>
-              
-             </div>
-          </div>
-          <div class="poster-list">
-            <img src="https://spaces.w3schools.com/images/DzkBxH3yUfU.jpg" loading="lazy" alt="Photo by hafizh armynazrie | Unsplash"/>
-            <div class="poster-text">
-              <h3>Karolyn B
-              </h3>
-            </div>
-          </div>
-          <div class="poster-list">
-            <img src="https://spaces.w3schools.com/images/zndslHAXhAw.jpg" loading="lazy" alt="Photo by Obafemi Moyosade | Unsplash"/>
-            <div class="poster-text">
-              <h3>Edwin B. McKenzie
-              </h3>
-            </div>
-          </div>
-          <div class="poster-list">
-            <img src="https://spaces.w3schools.com/images/OHOArMflSpM.jpg" loading="lazy" alt="Photo by Joshua Hanson | Unsplash"/>
-            <div class="poster-text">
-        
-                <h3>William J. Smith
-               </h3>
-             
-            </div>
-         </div>
-         <div class="poster-list">
-          <img src="https://spaces.w3schools.com/images/bf8APnBxoCk.jpg" loading="lazy" alt="Photo by Thiago Borrere Alvim | Unsplash"/>
-          <div class="poster-text">
-         
-              <h3>John L. Garrick
-             </h3>
-           
-          </div>
-       </div>
-       <div class="poster-list">
-        <img src="https://spaces.w3schools.com/images/1s9TY8FRBNs.jpg" loading="lazy" alt="Photo by Music HQ | Unsplash"/>
-        <div class="poster-text">
-       
-            <h3>Ruth R. Channel
-           </h3>
-         
+        <!-- Santé 🏥❤️ -->
+        <div class="flex flex-col items-center">
+            <img src="https://placehold.co/80x80" class="w-20 h-20 rounded-xl">
+            <span class="mt-2 text-sm font-semibold text-gray-700">Santé</span>
         </div>
-     </div>
-
+        <!-- Finances 💰📊 -->
+        <div class="flex flex-col items-center">
+            <img src="https://placehold.co/80x80" class="w-20 h-20 rounded-xl">
+            <span class="mt-2 text-sm font-semibold text-gray-700">Finances</span>
         </div>
+        <!-- Réflexion Humaine -->
+        <a href="./reflexion/Reflexion.html" target="_blank" class="flex flex-col items-center">
+            <img src="https://placehold.co/80x80" class="w-20 h-20 rounded-xl">
+            <span class="mt-2 text-sm font-semibold text-gray-700">Réflexion</span>
+        </a>
+        <!-- Regrets 😢⏳ -->
+        <div class="flex flex-col items-center">
+            <img src="https://placehold.co/80x80" class="w-20 h-20 rounded-xl">
+            <span class="mt-2 text-sm font-semibold text-gray-700">Regrets</span>
         </div>
-        <div class="sponsor"> 
-          <div class="title">
-            <h2>sponsors</h2>
-        </div> 
-
-          <div class="sponsor-main">
-            <div class="sponsor-image">
-              <img src="https://spaces.w3schools.com/logo_4x.png"  loading="lazy" alt="W3Schools"/>
-                   
-            </div>
-            <div class="sponsor-image">
-              <img src="https://spaces.w3schools.com/logo_4x.png" loading="lazy" alt="W3Schools"/>
-            </div>
-            <div class="sponsor-image">
-              <img src="https://spaces.w3schools.com/logo_4x.png" loading="lazy" alt="W3Schools"/>
-  
-            </div>
-            <div class="sponsor-image">
-              <img src="https://spaces.w3schools.com/logo_4x.png" loading="lazy" alt="W3Schools"/>
-  
-            </div>
-            
-            
-          </div>
+        <!-- Production alimentaire 🌾🏭 -->
+        <div class="flex flex-col items-center">
+            <img src="https://placehold.co/80x80" class="w-20 h-20 rounded-xl">
+            <span class="mt-2 text-sm font-semibold text-gray-700">Production alimentaire</span>
         </div>
-
-        <div class="ticket" id="ticket">
-        
-            <h2>ticket packages</h2>
-    
-        <div class="ticket-main">
-             <div class="ticket-list ticket-pro">
-               <h4 class="ticket-header">VIP</h4>
-               <div class="ticket-icon">
-                <img src="img/vip-card.png" loading="lazy" alt="vip-card"/>
-              </div>
-              <div class="ticket-text">
-                <li>Free set</li>
-                <li>Free Drink and Food</li>
-                <li>Photoshoot</li>
-              </div>
-              <a href="#book" class="w3-btn w3-red w3-margin-top w3-round" style="width: 100%;">
-
-                Buy Ticket
-              </a>
-                <div class="ticket-price">
-                  <p>$40</p>
-                </div>
-             </div>
-             <div class="ticket-list ">
-               <h4 class="ticket-header">
-                 Family
-               </h4>
-               <div class="ticket-icon">
-                <img src="img/family-group.svg" loading="lazy" alt="family"/>
-              </div>
-              <div class="ticket-text">
-                <li>Free set</li>
-                <li>10 Free photo shoot</li>
-                <li>Photo shoot</li>
-              </div>
-              <a href="#book" class="w3-btn w3-red w3-margin-top w3-round" style="width: 100%;">
-
-                Buy Ticket
-              </a>
-              <div class="ticket-price">
-                <p>$40</p>
-              </div>
-             </div>
-             <div class="ticket-list">
-               <h4 class="ticket-header">Reserved</h4>
-               <div class="ticket-icon">
-                <img src="img/guarantee.png" loading="lazy" alt="guarantee"/>
-              </div>
-              <div class="ticket-text">
-                <li>Enjoy concert</li>
-                <li>Free Drink and Food</li>
-                <li>Live screen</li>
-              </div>
-              <a href="#book" class="w3-btn w3-red w3-margin-top w3-round" style="width: 100%;">
-
-                Buy Ticket
-              </a>
-              <div class="ticket-price">
-                <p>$40</p>
-              </div>
-             </div>
+        <!-- Commerce, Inventaire, Distributeurs, Fournisseurs -->
+        <div class="flex flex-col items-center">
+            <img src="https://placehold.co/80x80" class="w-20 h-20 rounded-xl">
+            <span class="mt-2 text-sm font-semibold text-gray-700">Commerce</span>
         </div>
-                    
-        </div>
-        
-
-       <div class="buy-ticket" id="book">
-      
-          <h2>Buy a Ticket</h2>
-      
-       
-      
-      <div class="buy-ticket-main">
-
-        <div class="buy-ticket-image"> 
-              <img src="https://spaces.w3schools.com/images/usOGcvSdvnk.jpg" loading="lazy"  alt="Photo by Vidar Nordli-Mathisen | Unsplash"/>
-        </div>
-        <div class="buy-ticket-form">
-          <p>Please fill this form, we will send your digital ticket to your email address</p>
-          <form>
-            <div>
-            <label for="fname">Full name:</label><br>
-            <input type="text" id="fname" name="fname" placeholder="Full Name">
-            
-          </div>
-            <label for="Email">Email</label>
-            <br>
-            <input type="Email" id="email" name="Emial" placeholder="example@something.com"><br>
-            <div>
-              <label for="cars">Choose Ticket type:</label>
-              <select>
-                <option value="vip" class="option">VIP</option>
-                <option value="family"class="option">Family</option>
-                <option value="Reserved"class="option">Reserved</option>
-            
-              </select>
-            </div>
-            <button class="w3-btn w3-red  w3-round" style="width: 50%; margin-top: 75px;">Submit</button>
-          </form> 
-        </div>
-      </div>
-
-       </div>
-
-
-
-      </div>
-    </main>
-    <div class="w3-padding w3-center" style="background: #FFF4A3;padding: 10px 0px !important; color:#282A35; ">
-      <div style="display: flex; justify-content: center;align-items: center; flex-wrap: wrap;">
-        <p style="margin: 10px !important ">This website was made with w3schools Spaces. Make your own free website today</p>
-        <a class="w3-margin-top w3-btn w3-text-white  w3-round-xxlarge" style=" background-color:#282A35;padding: 8px 25px;  margin:0px  !important">Start now</a>
-      </div>
-    
     </div>
 </body>
 </html>
