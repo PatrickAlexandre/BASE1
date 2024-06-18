@@ -63,21 +63,70 @@
             chartConnaissance.draw(dataConnaissance, optionsConnaissance);
 
             // Compteur de Monnaies
-            document.getElementById('compteur').innerHTML = '<i class="fas fa-clock"></i> Temps: 50 | <i class="fas fa-dollar-sign"></i> Argent: 30 | <i class="fas fa-book"></i> Connaissance: 20';
+            document.getElementById('compteur').innerHTML = '<i class="fas fa-clock"></i> Temps: 50<br><i class="fas fa-book"></i> Connaissance: 20<br><i class="fas fa-dollar-sign"></i> Argent: 30';
+
+            // Barre de Vie et Mana
+            document.getElementById('compteur-vie-mana').innerHTML = `
+                <div class="barre">
+                    <i class="fas fa-heart icone-barre"></i>
+                    <div class="barre-vie" style="width: 80%;"><span class="barre-text">80%</span></div>
+                </div>
+                <div class="barre">
+                    <i class="fas fa-bolt icone-barre"></i>
+                    <div class="barre-mana" style="width: 60%;"><span class="barre-text">60%</span></div>
+                </div>
+            `;
         }
     </script>
     <style>
         body {
             font-family: Arial, sans-serif;
         }
-        #compteur {
+        #compteur, #compteur-vie-mana {
             position: fixed;
-            top: 10px;
-            right: 10px;
+            bottom: 10px;
+            left: 10px;
             background-color: #f2f2f2;
             padding: 10px;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+            width: 200px;
+            margin-top: 10px;
+        }
+        #compteur-vie-mana {
+            bottom: 10px;
+            left: 230px; /* Adjust this value to position it correctly next to the first compteur */
+        }
+        .barre {
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .icone-barre {
+            margin-right: 5px;
+        }
+        .barre-vie, .barre-mana {
+            height: 20px;
+            border-radius: 5px;
+            color: white;
+            text-align: center;
+            line-height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            flex-grow: 1;
+        }
+        .barre-text {
+            position: absolute;
+            width: 100%;
+        }
+        .barre-vie {
+            background-color: #ff4d4d;
+        }
+        .barre-mana {
+            background-color: #4d79ff;
         }
         h1 {
             text-align: center;
@@ -108,6 +157,7 @@
 <body>
     <h1>Dashboard de Gestion des Ressources</h1>
     <div id="compteur"></div>
+    <div id="compteur-vie-mana"></div>
     <div class="dashboard-container">
         <div class="zone" id="zone-temps">
             <h2><i class="fas fa-clock"></i> Temps</h2>
