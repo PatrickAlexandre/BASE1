@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation</title>
+    <style>
+        nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            float: left;
+            position: relative;
+        }
+        nav ul li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        nav ul li a:hover {
+            background-color: #111;
+        }
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #333;
+        }
+        nav ul li:hover ul {
+            display: block;
+        }
+        nav ul li ul li {
+            float: none;
+        }
+        nav ul li ul li a {
+            padding: 14px 16px;
+        }
+        nav ul li ul li a:hover {
+            background-color: #111;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <ul id="nav-links">
+        <!-- Les liens seront ajoutés ici par JavaScript -->
+    </ul>
+</nav>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Charger les liens depuis le fichier JSON
+        fetch('liens.json')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok ' + response.statusText);
+                }
+                return response.json();
+            })
+            .then(data => {
+                const ul = document.getElementById('nav-links');
+                data.liens.forEach(lien => {
+                    const li = document.createElement('li');
+                    const a = document.createElement('a');
+                    a.href = lien.href;
+                    a.textContent = lien.text;
+                    li.appendChild(a);
+
+                    if (lien.sublinks) {
+                        const subUl = document.createElement('ul');
+                        lien.sublinks.forEach(sublink => {
+                            const subLi = document.createElement('li');
+                            const subA = document.createElement('a');
+                            subA.href = sublink.href;
+                            subA.textContent = sublink.text;
+                            subLi.appendChild(subA);
+                            subUl.appendChild(subLi);
+                        });
+                        li.appendChild(subUl);
+                    }
+
+                    ul.appendChild(li);
+                });
+            })
+            .catch(error => console.error('Erreur lors du chargement des liens:', error));
+    });
+</script>
+
+</body>
+</html>

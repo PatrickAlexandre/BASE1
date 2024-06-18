@@ -1,0 +1,30 @@
+{
+    "liens": [
+        {"href": "#musique", "text": "Musique"},
+        {"href": "#finance", "text": "Finance"},
+        {"href": "#marketing", "text": "Marketing"},
+        {"href": "#communication", "text": "Communication"},
+        {
+            "href": "#multimedia",
+            "text": "Multimédia",
+            "sublinks": [
+                {"href": "https://pexels.com", "text": "pexels.com"},
+                {"href": "https://pixabay.com", "text": "pixabay.com"},
+                {"href": "https://remove.bg", "text": "remove.bg"},
+                {"href": "https://pixlr.com", "text": "pixlr.com"},
+                {"href": "https://4kdownload.com", "text": "4kdownload.com"},
+                {"href": "https://loom.com", "text": "loom.com"},
+                {"href": "https://mp4upload.com", "text": "mp4upload.com"},
+                {"href": "https://players.brightcove.net", "text": "players.brightcove.net"},
+                {"href": "https://voicemod.net", "text": "voicemod.net"}
+            ]
+        },
+        {"href": "#divertissement", "text": "Divertissement"},
+        {"href": "#reseauxsociaux", "text": "Réseaux Sociaux"},
+        {"href": "#commerce", "text": "Commerce *17"},
+        {"href": "#actualites", "text": "Actualités *17"},
+        {"href": "#productivite", "text": "Productivité *17"},
+        {"href": "#education", "text": "Éducation *23"},
+        {"href": "#technologie", "text": "Technologie *162"}
+    ]
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard de Gestion des Ressources</title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script type="text/javascript">
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawCharts);
+
+        function drawCharts() {
+            // Revenu et Dépenses
+            var dataRevenuDepenses = google.visualization.arrayToDataTable([
+                ['Type', 'Montant'],
+                ['Revenus', 10000],
+                ['Dépenses', 8000]
+            ]);
+            var optionsRevenuDepenses = {
+                title: 'Revenus et Dépenses'
+            };
+            var chartRevenuDepenses = new google.visualization.PieChart(document.getElementById('revenu-depenses-chart'));
+            chartRevenuDepenses.draw(dataRevenuDepenses, optionsRevenuDepenses);
+
+            // Dépenses
+            var dataDepenses = google.visualization.arrayToDataTable([
+                ['Catégorie', 'Montant'],
+                ['Loyer', 3000],
+                ['Nourriture', 2000],
+                ['Transport', 1000],
+                ['Loisirs', 2000]
+            ]);
+            var optionsDepenses = {
+                title: 'Répartition des Dépenses'
+            };
+            var chartDepenses = new google.visualization.PieChart(document.getElementById('depenses-chart'));
+            chartDepenses.draw(dataDepenses, optionsDepenses);
+
+            // Activités Quotidiennes
+            var dataActivites = google.visualization.arrayToDataTable([
+                ['Activité', 'Heures'],
+                ['Travail', 8],
+                ['Sommeil', 8],
+                ['Loisirs', 4],
+                ['Autres', 4]
+            ]);
+            var optionsActivites = {
+                title: 'Répartition des Activités Quotidiennes'
+            };
+            var chartActivites = new google.visualization.PieChart(document.getElementById('activites-chart'));
+            chartActivites.draw(dataActivites, optionsActivites);
+
+            // Monnaie de Connaissance
+            var dataConnaissance = google.visualization.arrayToDataTable([
+                ['Activité', 'Heures'],
+                ['Lecture', 5],
+                ['Formation', 3],
+                ['Recherche', 2]
+            ]);
+            var optionsConnaissance = {
+                title: 'Monnaie de Connaissance'
+            };
+            var chartConnaissance = new google.visualization.PieChart(document.getElementById('connaissance-chart'));
+            chartConnaissance.draw(dataConnaissance, optionsConnaissance);
+
+            // Compteur de Monnaies
+            document.getElementById('compteur').innerHTML = '<i class="fas fa-clock"></i> Temps: 50 | <i class="fas fa-dollar-sign"></i> Argent: 30 | <i class="fas fa-book"></i> Connaissance: 20';
+        }
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #compteur {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: #f2f2f2;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        .dashboard-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 60px;
+        }
+        .zone {
+            flex: 1 1 30%;
+            padding: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 5px;
+            background-color: #fff;
+            margin: 10px;
+        }
+        .zone h2 {
+            text-align: center;
+        }
+        .chart {
+            width: 100%;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dashboard de Gestion des Ressources</h1>
+    <div id="compteur"></div>
+    <div class="dashboard-container">
+        <div class="zone" id="zone-temps">
+            <h2><i class="fas fa-clock"></i> Temps</h2>
+            <div id="activites-chart" class="chart"></div>
+        </div>
+        <div class="zone" id="zone-connaissance">
+            <h2><i class="fas fa-book"></i> Connaissance</h2>
+            <div id="connaissance-chart" class="chart"></div>
+        </div>
+        <div class="zone" id="zone-argent">
+            <h2><i class="fas fa-dollar-sign"></i> Argent</h2>
+            <div id="revenu-depenses-chart" class="chart"></div>
+            <div id="depenses-chart" class="chart"></div>
+        </div>
+    </div>
+</body>
+</html>
