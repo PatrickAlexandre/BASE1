@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réplique de l'UX d'iOS</title>
+    <style>
+        /* Styles de base */
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+        .navbar, .bottom-nav {
+            position: fixed;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+        .navbar {
+            top: 0;
+        }
+        .bottom-nav {
+            bottom: 0;
+            justify-content: space-around;
+        }
+        .content {
+            padding: 70px 20px 70px;
+        }
+        .card {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            margin: 10px 0;
+            padding: 20px;
+        }
+        .icon {
+            width: 24px;
+            height: 24px;
+        }
+        .nav-item {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+        .nav-item img {
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="nav-item">
+            <img src="back-icon.png" alt="Retour" class="icon">
+            <span>Retour</span>
+        </div>
+        <div class="nav-item">
+            <span>Titre de l'App</span>
+        </div>
+        <div class="nav-item">
+            <img src="menu-icon.png" alt="Menu" class="icon">
+        </div>
+    </div>
+    <div class="content">
+        <div class="card">
+            <h2>Titre de la Carte 1</h2>
+            <p>Contenu de la carte 1.</p>
+        </div>
+        <div class="card">
+            <h2>Titre de la Carte 2</h2>
+            <p>Contenu de la carte 2.</p>
+        </div>
+        <div class="card">
+            <h2>Titre de la Carte 3</h2>
+            <p>Contenu de la carte 3.</p>
+        </div>
+    </div>
+    <div class="bottom-nav">
+        <div class="nav-item">
+            <img src="home-icon.png" alt="Accueil" class="icon">
+            <span>Accueil</span>
+        </div>
+        <div class="nav-item">
+            <img src="search-icon.png" alt="Recherche" class="icon">
+            <span>Recherche</span>
+        </div>
+        <div class="nav-item">
+            <img src="settings-icon.png" alt="Paramètres" class="icon">
+            <span>Paramètres</span>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.card');
+            cards.forEach(card => {
+                card.addEventListener('click', function() {
+                    alert('Carte cliquée: ' + this.querySelector('h2').innerText);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
